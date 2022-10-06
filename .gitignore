@@ -1,0 +1,12 @@
+node_modules
+venv
+.env
+coverage
+coverage.json
+typechain
+.openzeppelin
+
+#Hardhat files
+cache
+artifacts
+temp

@@ -50,8 +50,8 @@ contract TestTokenBuyTether is ERC20, Ownable {
     }
 
     function withdraw() public onlyOwner {
-        (bool os, ) = payable(owner()).call{value: address(this).balance}("");
-        require(os);
+        (bool success, ) = payable(owner()).call{value: address(this).balance}("");
+        require(success,"Transfer failed!");
     }
 
 }
